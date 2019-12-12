@@ -14,3 +14,55 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+
+body {
+  background: green;
+  box-sizing: border-box;
+}
+
+.card {
+  text-align: center;
+  display: block;
+  background: whitesmoke;
+  margin: auto;
+  height: 380px;
+  width: 270px;
+  font-size: 110px;
+  padding: 10px;
+  padding-top: 100px;
+  border: 1px solid gray;
+  border-radius: 8px;
+  font-family: "Times New Roman", Times, serif;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    font-size: 110px;
+    top: 0%;
+    left: 5%;
+  }
+  &:after {
+    position: absolute;
+    font-size: 110px;
+    bottom: 15px;
+    right: 10px;
+  }
+  &.spade:before,
+  &.spade:after {
+    content: "\2660";
+  }
+  &.club:before,
+  &.club:after {
+    content: "\2663";
+  }
+  &.heart:before,
+  &.heart:after {
+    content: "\2665";
+    color: red;
+  }
+  &.diamond:before,
+  &.diamond:after {
+    content: "\2666";
+    color: red;
+  }
+}
